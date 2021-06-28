@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pubg | AWM fire animation with sound</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <a class="a-center">Use in desktop mode</a>
+    </div>
+    <div class="footer">
+        <p>Made with ❤ by <a href="https://github.com/jatindhar" title="Check My Other Projects">Jatin Dhar</a></p>
+    </div>
+    <section>
+        <audio id="audio" src="awm.mp3" autostart="false"></audio>
+    </section>
+    <script>
+        document.addEventListener("click",function (e) {
+            var body = document.querySelector('body');
+            var bullet = document.createElement('span');
+            var x = e.offsetX;
+            var y = e.offsetY;
+            bullet.style.left = x + 'px';
+            bullet.style.top = y + 'px';
+            body.appendChild(bullet);
+            var audio = document.getElementById('audio');
+            audio.play();
+        })
+    </script>
+</body>
+</html>
